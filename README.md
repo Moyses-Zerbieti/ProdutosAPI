@@ -28,6 +28,18 @@ A aplicação está preparada para funcionar também com **PostgreSQL**, bastand
 
 ---
 
+## 📖 Documentação da API (Swagger)
+
+A documentação dos endpoints está disponível via Swagger UI:
+
+🔗 [Acesse o Swagger aqui](http://localhost:8080/swagger-ui.html)
+
+### 🖼️ Interface Swagger
+
+![Swagger - ProdutosAPI](docs/swagger-endpoints.PNG)
+
+---
+
 ## 🛠️ Estrutura da tabela SQL
 
 ```sql
