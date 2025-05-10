@@ -28,6 +28,18 @@ A aplicação está preparada para funcionar também com **PostgreSQL**, bastand
 
 ---
 
+## 🔐 Sobre o campo `ID`
+
+Na criação de novos produtos via `POST`, **não é necessário informar o campo `id`** no JSON.  
+O sistema gera automaticamente um identificador único (UUID) para cada produto.
+
+Essa configuração foi feita usando:
+
+```java
+@JsonProperty(access = JsonProperty.Access.READ_ONLY)
+````
+---
+
 ## 📖 Documentação da API (Swagger)
 
 A documentação dos endpoints está disponível via Swagger UI:
