@@ -1,5 +1,6 @@
 package exemplo.com.produtosapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -23,6 +24,7 @@ public class Produto {
     @Column
     private Double preco;
 
+    @JsonIgnore //ignorar o id no swagger
     public String getId() {
         return id;
     }
