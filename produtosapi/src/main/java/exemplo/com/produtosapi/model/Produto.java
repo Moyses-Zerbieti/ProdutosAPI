@@ -1,6 +1,7 @@
 package exemplo.com.produtosapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -10,6 +11,7 @@ import jakarta.persistence.Table;
 @Table (name = "produto") // faz referencia ao nome da tabela SQL
 public class Produto {
 
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @Id // diz que ID é a chave primaria
 
     @Column (name = "codigo") //faz referencia ao nome da coluna "codigo" na tabela SQL
@@ -24,7 +26,7 @@ public class Produto {
     @Column
     private Double preco;
 
-    @JsonIgnore //ignorar o id no swagger
+    @JsonIgnore // Ignora o id no Swagger
     public String getId() {
         return id;
     }
